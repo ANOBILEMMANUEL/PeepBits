@@ -51,3 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.remove("show");
   });
 });
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none"; // Hide preloader
+});

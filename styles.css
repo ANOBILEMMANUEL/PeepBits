@@ -146,14 +146,16 @@ footer {
   height: 100vh;
 }
 .homeflex {
-  width: fit-content;
-  flex-wrap: wrap;
+  width: 100%;
+  flex-wrap: ;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
-.imgg {
-  width: auto;
+.imgg img {
+  max-width: 100%;
+  height: auto;
+  flex: 2;
 }
 .homecards {
   display: flex;

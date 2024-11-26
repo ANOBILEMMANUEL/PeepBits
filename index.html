@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PeepBits</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="images/PeepBits logo 1.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <span id="closeSidebar" class="close-btn">&times;</span>
+      <div class="profile">
+        <img
+          src="images/profile pic.png"
+          alt="Anobil Emmanuel's Profile Picture"
+        />
+        <h3>Anobil Emmanuel</h3>
+        <p>Web Developer | Graphic Designer</p>
+      </div>
+      <ul>
+        <li>
+          <a href="#" class="nav-link" data-target="home"
+            ><i class="fa-solid fa-house-laptop"></i>Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-target="services"
+            ><i class="fa-solid fa-gear"></i>Services</a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-target="about"
+            ><i class="fa-solid fa-address-card"></i>About</a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-target="blog"
+            ><i class="fa-solid fa-blog"></i>Blog</a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-target="contact"
+            ><i class="fa-solid fa-address-book"></i>Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <span id="hamburger" class="hamburger">&#9776;</span>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section id="homePage" class="page active">
+        <div class="homeflex">
+          <header class="header">
+            <h1 class="">Crafting Digital Experiences</h1>
+            <p>
+              Design is not just what it looks like and feels like. Design is
+              how it works.
+            </p>
+            <button class="btn"><a href="#servicesPage">SERVICES</a></button>
+          </header>
+         
+            <div class="imgg">
+              <img src="images/png.png" width="400px" height="400px" />
+            </div>
+          </div>
+        </div>
+
+        <p>Welcome to my responsive portfolio!</p>
+      </section>
+
+      <section id="servicesPage" class="page">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <div class="container">
+            <div class="box">
+              <!-- Service Content -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="aboutPage" class="page">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate web developer with experience in creating dynamic
+          and responsive websites.
+        </p>
+      </section>
+
+      <section id="blogPage" class="page">
+        <h2>Blog</h2>
+        <div class="blogcontainer">
+          <div class="container">
+            <div class="box">
+              <h3>Latest Web Development Trends</h3>
+              <p>
+                Web development is constantly evolving. Here are some of the
+                latest trends...
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="box">
+              <h3>Latest Web Development Trends</h3>
+              <p>
+                Web development is constantly evolving. Here are some of the
+                latest trends...
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="box">
+              <h3>Latest Web Development Trends</h3>
+              <p>
+                Web development is constantly evolving. Here are some of the
+                latest trends...
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="box">
+              <h3>Latest Web Development Trends</h3>
+              <p>
+                Web development is constantly evolving. Here are some of the
+                latest trends...
+              </p>
+            </div>
+            <div class="box">
+              <h3>Latest Web Development Trends</h3>
+              <p>
+                Web development is constantly evolving. Here are some of the
+                latest trends...
+              </p>
+            </div>
+            <div class="box">
+              <h3>Latest Web Development Trends</h3>
+              <p>
+                Web development is constantly evolving. Here are some of the
+                latest trends...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contactPage" class="page">
+        <h2>Contact Me</h2>
+        <button id="contactButton" class="btn">Contact Form</button>
+      </section>
+    </main>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal" aria-hidden="true" role="dialog">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Contact Form</h2>
+        <form
+          id="contactForm"
+          method="post"
+          action="https://formspree.io/f/movqnlqv"
+        >
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

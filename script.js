@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
   const pages = document.querySelectorAll(".page");
   const sidebar = document.getElementById("sidebar");
@@ -52,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.remove("show");
   });
 });
-=======
+
 document.addEventListener("DOMContentLoaded", () => {
   const pages = document.querySelectorAll(".page");
   const sidebar = document.getElementById("sidebar");
@@ -106,4 +105,3 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.remove("show");
   });
 });
->>>>>>> e8050233070b4931aabdad37dbf4fd1dd7a97a23

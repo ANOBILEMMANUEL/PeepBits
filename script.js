@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Show the selected page
       const target = e.target.getAttribute("data-target") + "Page";
       document.getElementById(target).classList.add("active");
+
+      // Close the sidebar when navigating (optional for mobile UX)
+      sidebar.classList.remove("show");
+      hamburger.style.display = "block";
     });
   });
 
@@ -31,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   closeModal.addEventListener("click", () => {
     contactModal.style.display = "none";
+    // Ensure hamburger icon remains visible
+    hamburger.style.display = "block";
   });
 
   // Form submission logic (for demo purposes)
@@ -44,14 +50,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu toggle
   hamburger.addEventListener("click", () => {
     sidebar.classList.toggle("show");
+    hamburger.style.display = sidebar.classList.contains("show")
+      ? "block"
+      : "none";
   });
 
   // Close sidebar on click of the X icon
   closeSidebarBtn.addEventListener("click", () => {
     sidebar.classList.remove("show");
+    hamburger.style.display = "block";
   });
-});
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.style.display = "none"; // Hide preloader
+
+  // Ensure hamburger icon reappears after sidebar transitions
+  sidebar.addEventListener("transitionend", () => {
+    if (!sidebar.classList.contains("show")) {
+      hamburger.style.display = "block";
+    }
+  });
+
+  // Preloader logic
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none"; // Hide preloader
+  });
 });
